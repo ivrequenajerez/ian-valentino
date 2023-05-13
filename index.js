@@ -1,5 +1,4 @@
 // Project Setup
-
 const canvas = document.querySelector('canvas');
 const c = canvas.getContext('2d');
 
@@ -75,7 +74,7 @@ function animate() {
 animate();
 
 // Agregamos un "event listener" al objeto global "window" que escucha el evento "keydown"
-window.addEventListener('keydown', () => {
+window.addEventListener('keydown', (event) => {
     // Dentro de la función que se ejecuta cuando ocurre el evento, imprimimos en la consola el valor de la variable "keydown"
-    console.log('keydown');
+    console.log(event);
 });
