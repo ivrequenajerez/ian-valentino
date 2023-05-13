@@ -46,6 +46,7 @@ class Player {
     // Creamos una función que cambie las propiedades de nuestro jugador (en cada frame)
     update() {
         this.draw(); 
+        this.position.x += this.velocity.x;
         this.position.y += this.velocity.y;
 
         // Creamos una condición
@@ -58,8 +59,37 @@ class Player {
         } 
     }
 }
+// Clase que representa una plataforma:
+class Platform {
+    constructor() {
+        this.position = {
+            x:700,
+            y:600
+        }
+        this.height=20
+        this.width=200
+    }
+
+    draw() {
+        c.fillStyle='black';
+        c.fillRect(this.position.x, this.position.y, this.width, this.height);
+    }
+
+}
 // Instancia del jugador
 const player = new Player(100, 100, 100, 100);
+// Instancia de la plataforma
+const platform = new Platform();  
+
+const keys = {
+    right: {
+        pressed: false
+    },
+    left: {
+        pressed: false
+    },
+}
+
 //player.draw();
 //player.update();
 
@@ -69,12 +99,64 @@ function animate() {
     requestAnimationFrame(animate);
     c.clearRect(0,0,canvas.width,canvas.height);
     player.update();
+    platform.draw();
+    if (keys.right.pressed) {
+        player.velocity.x = 5;
+    } else if (keys.left.pressed) {
+        player.velocity.x = -5;
+    } else { 
+        player.velocity.x=0
+    }
 }
 
 animate();
 
 // Agregamos un "event listener" al objeto global "window" que escucha el evento "keydown"
-window.addEventListener('keydown', (event) => {
-    // Dentro de la función que se ejecuta cuando ocurre el evento, imprimimos en la consola el valor de la variable "keydown"
-    console.log(event);
+window.addEventListener('keydown', ({ code }) => {
+    // Dentro de la función que se ejecuta cuando ocurre el evento, imprimimos en la consola el valor de la variable "code"
+    switch (code) {
+        case 'KeyA':
+            console.log('left');
+            keys.left.pressed = true;
+            break;
+        case 'KeyS':
+            console.log('down');
+            break;
+        case 'KeyD':
+            console.log('right');
+            keys.right.pressed = true;
+            break;
+        case 'KeyW':
+            console.log('up');
+            player.velocity.y -= 10; 
+            break;
+        default:
+            break;
+    }
+
+    console.log(keys.right.pressed);
+});
+
+window.addEventListener('keyup', ({ code }) => {
+    switch (code) {
+        case 'KeyA':
+            console.log('left');
+            keys.left.pressed = false;
+            break;
+        case 'KeyS':
+            console.log('down');
+            break;
+        case 'KeyD':
+            console.log('right');
+            keys.right.pressed = false;
+            break;
+        case 'KeyW':
+            console.log('up');
+            player.velocity.y -= 10; 
+            break;
+        default:
+            break;
+    }
+
+    console.log(keys.right.pressed);
 });
