@@ -97,6 +97,9 @@ const keys = {
 //player.draw();
 //player.update();
 
+// Opción de que termine el juego debido a que llega hasta cierto punto
+let scrollOffset = 0;
+
 // Creamos una función que va a llamar en bucle la función update, para así animar nuestro jugador
 // Función que se ejecuta en cada frame para animar el canvas
 function animate() {
@@ -117,10 +120,12 @@ function animate() {
         player.velocity.x = 0;
 
         if (keys.right.pressed) {
+            scrollOffset += 5;
             platforms.forEach((platform) => {
                 platform.position.x -= 5;
             })
         } else if (keys.left.pressed) {
+            scrollOffset -= 5;
             platforms.forEach((platform) => {
                 platform.position.x += 5;
             })
@@ -137,6 +142,11 @@ function animate() {
             player.velocity.y = 0;
         }
     })
+
+    if (scrollOffset > 2000) {
+        console.log('Fin del juego');
+    }
+
 }
 
 animate();
