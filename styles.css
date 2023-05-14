@@ -176,6 +176,8 @@ header.scrolled .header-container {
     align-items: center;
 }
 
+/* Botón animado */
+
 .button {
     position: relative;
     margin: 0px;
@@ -230,6 +232,18 @@ header.scrolled .header-container {
     opacity: 0;
 }
 
+/* FIN Botón animado */
+
 /* FIN Header */
 
-/**/
+/*MAIN*/
+
+
+
+/*FIN MAIN*/
+
+/*Footer*/
+
+
+
+/*FIN Footer*/
