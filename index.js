@@ -1,4 +1,5 @@
-import platform from './img/plataforma.png'
+let platform = new Image();
+platform.src = './img/plataforma.png';
 console.log(platform);
 // Project Setup
 const canvas = document.querySelector('canvas');
