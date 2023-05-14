@@ -220,11 +220,6 @@ header.scrolled .header-container {
     opacity: 0;
 }
 
-.button:hover {
-    transform: scale(1.2);
-    /*box-shadow: 20px 15px rgba(0,0,0,0.15);*/
-}
-
 .button:hover .icons .icon-hover {
     transform: rotate(0deg) scale(1);
     opacity: 1;

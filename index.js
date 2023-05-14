@@ -1,3 +1,5 @@
+import platform from './img/plataforma.png'
+console.log(platform);
 // Project Setup
 const canvas = document.querySelector('canvas');
 const c = canvas.getContext('2d');
@@ -80,9 +82,9 @@ class Platform {
 const player = new Player(100, 100, 100, 100);
 // Instancia de la plataforma
 const platforms = [new Platform({
-    x:700, y:600
+    x:560, y:600
 }), new Platform({
-    x:1000, y:600
+    x:1000, y:500
 })];  
 
 const keys = {
@@ -168,7 +170,7 @@ window.addEventListener('keydown', ({ code }) => {
             break;
         case 'KeyW':
             console.log('up');
-            player.velocity.y -= 10; 
+            player.velocity.y -= 15; 
             break;
         default:
             break;
@@ -192,7 +194,6 @@ window.addEventListener('keyup', ({ code }) => {
             break;
         case 'KeyW':
             console.log('up');
-            player.velocity.y -= 10; 
             break;
         default:
             break;
