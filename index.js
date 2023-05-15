@@ -82,25 +82,23 @@ class Platform {
 }
 
 class GenericObject {
-    constructor({ x, y, background }) {
+    constructor({ x, y, image }) {
         this.position = {
-            x:x,
-            y:y
+            x: x,
+            y: y
         }
-        this.height=20;
-        this.width=200;
+        this.height = 20;
+        this.width = 200;
 
-        this.background=background;
-        this.width = background.width;
-        this.height = background.height;
-
+        this.image = image;
+        this.width = image.width;
+        this.height = image.height;
     }
 
     draw() {
-        c.drawImage(this.background, this.position.x, this.position.y);
+        c.drawImage(this.image, this.position.x, this.position.y);
     }
 }
-
 let platform = new Image();
 platform.src = './img/plataforma2.4.png';
 
@@ -115,79 +113,48 @@ let background = new Image();
 background.src = './img/background.png';
 
 console.log(background);
-/*
-let background = new Image();
-background.src = './img/background.png';
 
-console.log(background);*/
+let bilbil = new Image();
+bilbil.src = './img/bil-bil2.png';
+
+console.log(bilbil);
 
 // Instancia del jugador
 const player = new Player(100, 100, 100, 100);
-// Instancia de la plataforma
+// Instancia de las plataformas
 const platforms = [
-        new Platform({
-        x:0, y:547, platform: platform
-    }), 
-        new Platform({
-        x: platform.width, y:547, platform: platform
-    }),
-        new Platform({
-        x: 300, y:547, platform: platform
-    }),
-        new Platform({
-        x: 400, y:547, platform: platform
-    }),
-        new Platform({
-        x: 520, y:400, platform: platform
-    }),
-        new Platform({
-        x: 500, y:547, platform: platform
-    }),
-        new Platform({
-        x: 600, y:547, platform: platform
-    }),
-        new Platform({
-        x: 700, y:547, platform: platform
-    }),
-        new Platform({
-        x: 700, y:360, platform: platform
-    }),
-        new Platform({
-        x: 800, y:547, platform: platform
-    }),
-        new Platform({
-        x: 900, y:547, platform: platform
-    }),
-    new Platform({
-        x: 1000, y:547, platform: platform
-    }),
-    new Platform({
-        x: 1100, y:547, platform: platform
-    }),
-    new Platform({
-        x: 1200, y:547, platform: platform
-    }),
-    new Platform({
-        x: 1300, y:547, platform: platform
-    }),
-    new Platform({
-        x: 1400, y:547, platform: platform
-    }),
-    new Platform({
-        x: 1500, y:547, platform: platform
-    }),
-    new Platform({
-        x: 1600, y:547, platform: platform
-    })
-];  
-
+    new Platform({x:0, y:547, platform}),
+    new Platform({x:platform.width, y:547, platform}),
+    new Platform({x:300, y:547, platform}),
+    new Platform({x:400, y:547, platform}),
+    new Platform({x:520, y:400, platform}),
+    new Platform({x:500, y:547, platform}),
+    new Platform({x:600, y:547, platform}),
+    new Platform({x:700, y:547, platform}),
+    new Platform({x:700, y:360, platform}),
+    new Platform({x:800, y:547, platform}),
+    new Platform({x:900, y:547, platform}),
+    new Platform({x:1000, y:547, platform}),
+    new Platform({x:1100, y:547, platform}),
+    new Platform({x:1200, y:547, platform}),
+    new Platform({x:1300, y:547, platform}),
+    new Platform({x:1400, y:547, platform}),
+    new Platform({x:1500, y:547, platform}),
+    new Platform({x:1600, y:547, platform})
+    ];
+   
 const genericObjects = [
-    new GenericObject ({
-        x:0,
-        y:0,
-        background: background
+    new GenericObject({
+        x: 0,
+        y: 0,
+        image: background
+    }),
+    new GenericObject({
+        x: 0,
+        y: 0,
+        image: bilbil
     })
-]
+];
 
 const keys = {
     right: {
