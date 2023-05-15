@@ -59,6 +59,7 @@ class Player {
         } 
     }
 }
+
 // Clase que representa una plataforma:
 class Platform {
     constructor({ x, y, platform }) {
@@ -83,28 +84,31 @@ class Platform {
 class GenericObject {
     constructor({ x, y, background }) {
         this.position = {
-            x: x,
-            y: y
-        };
-        this.width = window.innerWidth;
-        this.height = window.innerHeight;
-        this.background = background;
+            x:x,
+            y:y
+        }
+        this.height=20;
+        this.width=200;
+
+        this.background=background;
+        this.width = background.width;
+        this.height = background.height;
+
     }
 
-    draw(canvas) {
-        const ctx = canvas.getContext('2d');
-        ctx.drawImage(this.image, this.x, 0);
-        ctx.drawImage(this.image, this.x + canvas.width, 0);
+    draw() {
+        c.drawImage(this.background, this.position.x, this.position.y);
     }
 }
 
-
 let platform = new Image();
 platform.src = './img/plataforma2.4.png';
+
 console.log(platform);
 
 let background = new Image();
 background.src = './img/background.png';
+
 console.log(background);
 
 // Instancia del jugador
@@ -148,12 +152,16 @@ function animate() {
     requestAnimationFrame(animate);
     c.fillStyle='white'
     c.fillRect(0,0,canvas.width,canvas.height);
-    player.update();
+
+    genericObjects.forEach(genericObject => {
+        genericObject.draw();
+    })
     
     platforms.forEach(platform => {
         platform.draw();
     })
-    
+
+    player.update();
 
     if (keys.right.pressed &&
         player.position.x < 400) {
