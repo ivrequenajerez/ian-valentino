@@ -111,6 +111,11 @@ background.src = './img/background.png';
 
 console.log(background);
 
+let background = new Image();
+background.src = './img/background.png';
+
+console.log(background);
+
 // Instancia del jugador
 const player = new Player(100, 100, 100, 100);
 // Instancia de la plataforma
