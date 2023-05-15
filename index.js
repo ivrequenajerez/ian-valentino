@@ -105,27 +105,80 @@ let platform = new Image();
 platform.src = './img/plataforma2.4.png';
 
 console.log(platform);
+/*
+let platform2 = new Image();
+platform2.src = './img/plataforma1.png';
 
+console.log(platform2);
+*/
 let background = new Image();
 background.src = './img/background.png';
 
 console.log(background);
-
+/*
 let background = new Image();
 background.src = './img/background.png';
 
-console.log(background);
+console.log(background);*/
 
 // Instancia del jugador
 const player = new Player(100, 100, 100, 100);
 // Instancia de la plataforma
 const platforms = [
+        new Platform({
+        x:0, y:547, platform: platform
+    }), 
+        new Platform({
+        x: platform.width, y:547, platform: platform
+    }),
+        new Platform({
+        x: 300, y:547, platform: platform
+    }),
+        new Platform({
+        x: 400, y:547, platform: platform
+    }),
+        new Platform({
+        x: 520, y:400, platform: platform
+    }),
+        new Platform({
+        x: 500, y:547, platform: platform
+    }),
+        new Platform({
+        x: 600, y:547, platform: platform
+    }),
+        new Platform({
+        x: 700, y:547, platform: platform
+    }),
+        new Platform({
+        x: 700, y:360, platform: platform
+    }),
+        new Platform({
+        x: 800, y:547, platform: platform
+    }),
+        new Platform({
+        x: 900, y:547, platform: platform
+    }),
     new Platform({
-    x:0, y:547, platform: platform
-}), 
+        x: 1000, y:547, platform: platform
+    }),
     new Platform({
-    x: platform.width, y:547, platform: platform
-})
+        x: 1100, y:547, platform: platform
+    }),
+    new Platform({
+        x: 1200, y:547, platform: platform
+    }),
+    new Platform({
+        x: 1300, y:547, platform: platform
+    }),
+    new Platform({
+        x: 1400, y:547, platform: platform
+    }),
+    new Platform({
+        x: 1500, y:547, platform: platform
+    }),
+    new Platform({
+        x: 1600, y:547, platform: platform
+    })
 ];  
 
 const genericObjects = [
