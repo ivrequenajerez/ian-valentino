@@ -1,6 +1,3 @@
-let platform = new Image();
-platform.src = './img/plataforma.png';
-console.log(platform);
 // Project Setup
 const canvas = document.querySelector('canvas');
 const c = canvas.getContext('2d');
@@ -8,7 +5,7 @@ const c = canvas.getContext('2d');
 /*Estilos*/
 
 canvas.width = window.innerWidth; // Ajustamos el tamaño del canvas a toda la ventana del navegador
-canvas.height = window.innerHeight;
+canvas.height = 576;
 
 /*FIN Estilos*/
 
@@ -64,29 +61,71 @@ class Player {
 }
 // Clase que representa una plataforma:
 class Platform {
-    constructor({ x, y }) {
+    constructor({ x, y, platform }) {
         this.position = {
             x:x,
             y:y
         }
-        this.height=20
-        this.width=200
+        this.height=20;
+        this.width=200;
+
+        this.platform=platform;
+        this.width = platform.width;
+        this.height = platform.height;
+
     }
 
     draw() {
-        c.fillStyle='black';
-        c.fillRect(this.position.x, this.position.y, this.width, this.height);
+        c.drawImage(this.platform, this.position.x, this.position.y);
+    }
+}
+
+class GenericObject {
+    constructor({ x, y, background }) {
+        this.position = {
+            x: x,
+            y: y
+        };
+        this.width = window.innerWidth;
+        this.height = window.innerHeight;
+        this.background = background;
     }
 
+    draw(canvas) {
+        const ctx = canvas.getContext('2d');
+        ctx.drawImage(this.image, this.x, 0);
+        ctx.drawImage(this.image, this.x + canvas.width, 0);
+    }
 }
+
+
+let platform = new Image();
+platform.src = './img/plataforma2.4.png';
+console.log(platform);
+
+let background = new Image();
+background.src = './img/background.png';
+console.log(background);
+
 // Instancia del jugador
 const player = new Player(100, 100, 100, 100);
 // Instancia de la plataforma
-const platforms = [new Platform({
-    x:560, y:600
-}), new Platform({
-    x:1000, y:500
-})];  
+const platforms = [
+    new Platform({
+    x:0, y:547, platform: platform
+}), 
+    new Platform({
+    x: platform.width, y:547, platform: platform
+})
+];  
+
+const genericObjects = [
+    new GenericObject ({
+        x:0,
+        y:0,
+        background: background
+    })
+]
 
 const keys = {
     right: {
@@ -107,11 +146,14 @@ let scrollOffset = 0;
 // Función que se ejecuta en cada frame para animar el canvas
 function animate() {
     requestAnimationFrame(animate);
-    c.clearRect(0,0,canvas.width,canvas.height);
+    c.fillStyle='white'
+    c.fillRect(0,0,canvas.width,canvas.height);
     player.update();
+    
     platforms.forEach(platform => {
         platform.draw();
     })
+    
 
     if (keys.right.pressed &&
         player.position.x < 400) {
