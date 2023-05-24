@@ -70,7 +70,7 @@ class Platform {
         this.height=20;
         this.width=200;
 
-        this.platform=platform;
+        this.platform = platform;
         this.width = platform.width;
         this.height = platform.height;
 
@@ -98,7 +98,9 @@ class GenericObject {
     draw() {
         c.drawImage(this.image, this.position.x, this.position.y);
     }
+
 }
+
 let platform = new Image();
 platform.src = './img/plataforma2.4.png';
 
@@ -123,11 +125,30 @@ console.log(bilbil);
 const player = new Player(100, 100, 100, 100);
 // Instancia de las plataformas
 const platforms = [
+    new Platform({x:-1800, y:500, platform}),
+    new Platform({x:-1800, y:547, platform}),
+    new Platform({x:-1700, y:547, platform}),
+    new Platform({x:-1600, y:547, platform}),
+    new Platform({x:-1500, y:547, platform}),
+    new Platform({x:-1400, y:547, platform}),
+    new Platform({x:-1300, y:547, platform}),
+    new Platform({x:-1200, y:547, platform}),
+    new Platform({x:-1100, y:547, platform}),
+    new Platform({x:-1000, y:547, platform}),
+    new Platform({x:-900, y:547, platform}),
+    new Platform({x:-800, y:547, platform}),
+    new Platform({x:-700, y:547, platform}),
+    new Platform({x:-600, y:547, platform}),
+    new Platform({x:-500, y:547, platform}),
+    new Platform({x:-400, y:547, platform}),
+    new Platform({x:-300, y:547, platform}),
+    new Platform({x:-200, y:547, platform}),
+    new Platform({x:-100, y:547, platform}),
     new Platform({x:0, y:547, platform}),
     new Platform({x:platform.width, y:547, platform}),
     new Platform({x:300, y:547, platform}),
     new Platform({x:400, y:547, platform}),
-    new Platform({x:520, y:400, platform}),
+    new Platform({x:520, y:460, platform}),
     new Platform({x:500, y:547, platform}),
     new Platform({x:600, y:547, platform}),
     new Platform({x:700, y:547, platform}),
@@ -140,8 +161,19 @@ const platforms = [
     new Platform({x:1300, y:547, platform}),
     new Platform({x:1400, y:547, platform}),
     new Platform({x:1500, y:547, platform}),
-    new Platform({x:1600, y:547, platform})
-    ];
+    new Platform({x:1600, y:547, platform}),
+    new Platform({x:1700, y:547, platform}),
+    new Platform({x:1800, y:547, platform}),
+    new Platform({x:1900, y:547, platform}),
+    new Platform({x:2000, y:547, platform}),
+    new Platform({x:2100, y:547, platform}),
+    new Platform({x:2200, y:547, platform}),
+    new Platform({x:2300, y:547, platform}),
+    new Platform({x:2400, y:547, platform}),
+    new Platform({x:2500, y:547, platform}),
+    new Platform({x:2600, y:547, platform}),
+    new Platform({x:2700, y:547, platform})
+];
    
 const genericObjects = [
     new GenericObject({
@@ -149,11 +181,6 @@ const genericObjects = [
         y: 0,
         image: background
     }),
-    new GenericObject({
-        x: 0,
-        y: 0,
-        image: bilbil
-    })
 ];
 
 const keys = {
@@ -164,6 +191,9 @@ const keys = {
         pressed: false
     },
 }
+
+// Variable para controlar si el jugador está saltando o no
+let isJumping = false;
 
 //player.draw();
 //player.update();
@@ -210,6 +240,16 @@ function animate() {
         }
     }
 
+    // Condicional para controlar salto
+    if (player.position.y !== 400) {
+        isJumping = false;
+        platforms.forEach((platform) => {
+            if (player.position.y + player.height >= platform.position.y && player.position.y <= platform.position.y + platform.height) {
+                isJumping = true;
+            }
+        });
+    }
+
     // Colisión de dos figuras
     platforms.forEach((platform) => {
         if (player.position.y + player.height <= platform.position.y &&
@@ -218,10 +258,14 @@ function animate() {
             player.position.x <= platform.position.x + platform.width) {
             
             player.velocity.y = 0;
+
         }
     })
 
-    if (scrollOffset > 2000) {
+    if (scrollOffset >= 2000) {
+        player.position.x = 0;
+        player.position.y = 0;
+        scrollOffset = 0;
         console.log('Fin del juego');
     }
 
@@ -244,9 +288,12 @@ window.addEventListener('keydown', ({ code }) => {
             console.log('right');
             keys.right.pressed = true;
             break;
-        case 'KeyW':
+        case 'KeyW': // salto
             console.log('up');
-            player.velocity.y -= 15; 
+            if (!isJumping && player.velocity.y === 0) {
+                isJumping = true;
+                player.velocity.y -= 10;
+            }
             break;
         default:
             break;
@@ -254,6 +301,8 @@ window.addEventListener('keydown', ({ code }) => {
 
     console.log(keys.right.pressed);
 });
+
+
 
 window.addEventListener('keyup', ({ code }) => {
     switch (code) {
