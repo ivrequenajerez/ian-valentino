@@ -3,10 +3,10 @@
 body {
     margin: 0px;
     font-family: 'Montserrat', sans-serif;
-    background-color: black;
-    display: flex;
+    background-color: white;
+    /*display: flex;
     align-items: center;
-    justify-content: center;
+    justify-content: center;*/
     height: 100vh;
 }
 
@@ -88,6 +88,7 @@ header.scrolled .header-container {
 
 .header-elements {
     padding: 0px;
+    padding-left: 10%;
     margin: 0px;
     display: flex;
     align-items: center;
@@ -243,7 +244,39 @@ header.scrolled .header-container {
 
 /*MAIN*/
 
+.main-container {
+    margin-top: 100px;
+}
 
+.map-container {
+    text-align: center;
+}
+
+.imgCentral {
+    width: 200px;
+}
+
+.cards-container {
+    display: flex;
+    justify-content: center;
+}
+
+.card {
+    padding-left: 4%;
+    padding-right: 4%;
+}
+
+.card-color {
+    background-color: white;
+    border: solid 0.5px black;
+}
+
+.card-position {
+    display: inline-flex;
+    align-items: center;
+}
+
+/**/
 
 /*FIN MAIN*/
 
