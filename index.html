@@ -17,7 +17,7 @@
     <title>Inicio | Ian Valentino</title>
 </head>
 
-<body>
+<body class="body-container">
     <header>
         <div class="header-container sticky navbar-fixed-top" id="myHeader">
             <nav>
@@ -31,7 +31,7 @@
                             </div>
                         </li>
                         <li>
-                            <div id="container">
+                            <div id="dropdown-container">
                                 <div class="button dropdown dropdown-margin">
                                     <div class="icons">
                                         <i class="fa fa-heart icon-default"></i>
@@ -56,41 +56,38 @@
         <div class="main-container">
             <!--"Tarjetas descriptivas"-->
             <div class="cards-container"> <!--Primera fila-->
-                <div class="flip-card padding-card-sides"> <!--Tarjeta de la izquierda-->
-                    <div class="flip-card-inner">
-                        <div class="flip-card-front "> 
-                            <h2>Equipo</h2>
-                        </div>
-                        <div class="flip-card-back">
-                            <p>
-                                Somos un equipo de profesionales; la suma del trabajo individual de cada uno de nosotros
-                                es mucho menor que el trabajo que hacemos en conjunto.
+                <div class="flip-card margin-card-sides"> <!--Tarjeta de la izquierda-->
+                    <div class="card card1">
+                        <div class="content">
+                            <h2 class="title">Equipo</h2>
+                            <p class="copy">
+                                Juntos, profesionales apasionados, creamos <strong>resultados extraordinarios</strong> a
+                                través de la colaboración y la innovación.
                             </p>
                         </div>
                     </div>
                 </div>
                 <div class="flip-card">
-                    <div class="flip-card-inner">
-                        <div class="flip-card-front">
-                            <h2>Mi porfolio</h2>
-                        </div>
-                        <div class="flip-card-back">
-                            <p>
-                                "Colección física o digital de las mejores creaciones de un artista"
-                            </p>
+                    <div class="flip-card margin-card-sides"> <!--Tarjeta de la izquierda-->
+                        <div class="card card2">
+                            <video autoplay muted loop>
+                                <source src="img1/video1.mp4" type="video/mp4">
+                            </video>
+                            <div class="content">
+                                <h2 class="title">Mi porfolio</h2>
+                                <p class="copy">
+                                    "Colección física o digital de las mejores creaciones de un artista"
+                                </p>
+                            </div>
                         </div>
                     </div>
                 </div>
-                <div class="flip-card padding-card-sides">
-                    <div class="flip-card-inner">
-                        <div class="flip-card-front">
-                            <h2>Ian Valentino es...</h2> <!--Tarjeta de la derecha-->
-                        </div>
-                        <div class="flip-card-back">
-                            <p>
-                                El nombre que escogí para dar firma a mis creaciones en código,
-                                así como el diseño de estas, la filosofía que redacta cada
-                                trabajo por sí sólo, y el cariño y pasión con el que hago todo
+                <div class="flip-card margin-card-sides">
+                    <div class="card card3">
+                        <div class="content">
+                            <h2 class="title">Ian Valentino es...</h2>
+                            <p class="copy">
+                                Mi nombre, diseño y pasión en cada creación.
                             </p>
                         </div>
                     </div>
@@ -98,46 +95,49 @@
             </div>
             <!--Tarjetas de izquierda, derecha e imagen CENTRAL de la segunda fila-->
             <div class="cards-container">
-                <div class="flip-card padding-card-sides">
-                    <div class="flip-card-inner">
-                        <div class="flip-card-front">
-                            <h2>La diferencia</h2> <!--Tarjeta de la izquierda-->
-                        </div>
-                        <div class="flip-card-back">
-                            <p>
-                                Diseños personalizados, con arte propio de tu empresa, ideas propias plasmadas en cada
-                                detalle, desde el logo y tipografía hasta animaciones, imágenes de alta calidad, etc
+                <div class="flip-card margin-card-sides">
+                    <div class="card card4">
+                        <div class="content">
+                            <h2 class="title">La diferencia</h2>
+                            <p class="copy">
+                                Arte personalizado para tu empresa, en cada detalle.
                             </p>
                         </div>
                     </div>
                 </div>
                 <div class="flip-card">
-                    <div class="central-card-front">
-                        <img class="imgCentral" src="img1\perfil.png" alt="Icono central">
+                    <div class="central-card-front box">
+                        <a href="https://www.instagram.com/ianvalentino_/" target="_blank">
+                            <div class="hover-point"></div>
+                            <div class="hover-point"></div>
+                            <div class="hover-point"></div>
+                            <div class="hover-point"></div>
+                            <div class="hover-point"></div>
+                            <div class="hover-point"></div>
+                            <div class="hover-point"></div>
+                            <div class="hover-point"></div>
+                            <div class="box-contents"></div>
+                        </a>
                     </div>
                 </div>
-                <div class="arrow1-container">
-                    <img class="arrow" src="img1/flecha1.png">
+                <div class="arrow1-container arrow-container-size">
+                    <img class="arrow draggable" src="img1/flecha1.png" draggable="true">
                 </div>
-                <div class="arrow2-container">
-                    <img class="arrow" src="img1/flecha2.png">
+                <div class="arrow2-container arrow-container-size">
+                    <img class="arrow draggable" src="img1/flecha2.png" draggable="true">
                 </div>
-                <div class="arrow3-container">
-                    <img class="arrow" src="img1/flecha3.png">
+                <div class="arrow3-container arrow-container-size">
+                    <img class="arrow draggable" src="img1/flecha3.png" draggable="true">
                 </div>
-                <div class="arrow4-container">
-                    <img class="arrow" src="img1/flecha4.png">
+                <div class="arrow4-container arrow-container-size">
+                    <img class="arrow draggable" src="img1/flecha4.png" draggable="true">
                 </div>
-                <div class="flip-card padding-card-sides">
-                    <div class="flip-card-inner">
-                        <div class="flip-card-front">
-                            <h2>Base principal</h2> <!--Tarjeta de la derecha-->
-                        </div>
-                        <div class="flip-card-back">
-                            <p>
-                                El código: con buena sintaxis y funcionalidad perfecta, así quiero realizar mis
-                                trabajos, que llame la estética de cada pieza pero que también funcione y cumpla sus
-                                objetivos
+                <div class="flip-card margin-card-sides">
+                    <div class="card card5">
+                        <div class="content">
+                            <h2 class="title">Base principal</h2>
+                            <p class="copy">
+                                Código impecable, estética y funcionalidad en armonía.
                             </p>
                         </div>
                     </div>
@@ -145,13 +145,11 @@
             </div>
             <!--Tarjeta de la izquierda, centro y derecha de tercera fila-->
             <div class="cards-container">
-                <div class="flip-card padding-card-sides">
-                    <div class="flip-card-inner">
-                        <div class="flip-card-front">
-                            <h2>Puedo brindarte...</h2> <!--Tarjeta de la izquierda-->
-                        </div>
-                        <div class="flip-card-back">
-                            <p>
+                <div class="flip-card margin-card-sides">
+                    <div class="card card6">
+                        <div class="content">
+                            <h2 class="title">Puedo brindarte...</h2>
+                            <p class="copy">
                                 Creación de posts para redes sociales, sitios web interactivos, aplicaciones móviles,
                                 software para empresas, entre otros servicios.
                             </p>
@@ -165,32 +163,34 @@
                         </div>
                         <div class="flip-card-back">
                             <p>
-                                El español como idioma nativo y el inglés en nivel alto; redacción y creación, así como
-                                diseño y edición de contenido en RRSS, sitios web, apps, etc
+                                Español nativo. Inglés avanzado. Redacción, diseño y creación en RRSS, web, apps y más.
                             </p>
                         </div>
                     </div>
                 </div>
-                <div class="flip-card padding-card-sides">
-                    <div class="flip-card-inner">
-                        <div class="flip-card-front">
-                            <h2>Herramientas</h2> <!--Tarjeta de la derecha-->
-                        </div>
-                        <div class="flip-card-back">
-                            <p>
-                                Java, JavaScript, Html y Css son las herramientas en las que más quiero enfocarme. Luego
-                                no pueden faltar Wordpress, Adobe, SQL, IA, entre otros
+                <div class="flip-card margin-card-sides">
+                    <div class="card card7">
+                        <div class="content">
+                            <h2 class="title">Herramientas</h2>
+                            <p class="copy">
+                                Java, JavaScript, HTML, CSS: mis pilares. Wordpress, Adobe, SQL, IA y más,
+                                complementando mi arsenal.
                             </p>
                         </div>
                     </div>
                 </div>
             </div>
+            <div class="page-content">
+
+            </div>
+
 
         </div>
 
     </main>
     <footer>
-        <script src="game.js" type="module"></script>
+        <!--<script src="game.js" type="module"></script>-->
+        <script src="myscript.js" defer></script>
     </footer>
 </body>
 
