@@ -68,10 +68,15 @@ header.scrolled .header-container {
   height: 80px;
   display: flex;
   align-items: center;
+  background-color: white;
+}
+
+.header-container.scrolled {
+  background-color: white;
 }
 
 .navbar-fixed-top {
-  background-color: white !important;
+  background-color: transparent;
   transition: background-color 200ms linear;
 }
 
@@ -229,12 +234,16 @@ header.scrolled .header-container {
 
 /*----Main----*/
 
-.main-container {
-  margin-top: 100px;
-  background-image: url(img1/fondo.jpg);
+body {
+  
+  background-image: url(img1/fondo1.jpg);
   background-repeat: no-repeat;
   background-size: 100%;
   background-position: center;
+}
+
+.main-container {
+  padding-top: 100px;
 }
 
 .map-container {
@@ -675,8 +684,6 @@ header.scrolled .header-container {
   transform: perspective(1000px) rotateX(-10deg) rotateY(10deg) rotateZ(2deg);
 }
 
-/*Footer*/
-
 :root {
   --d: 700ms;
   --e: cubic-bezier(0.19, 1, 0.22, 1);
@@ -941,5 +948,6 @@ header.scrolled .header-container {
   }
 }
 
+/*Footer*/
 
 /*FIN Footer*/

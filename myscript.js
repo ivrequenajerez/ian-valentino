@@ -56,3 +56,14 @@ function getDragAfterElement(container, y) {
     }
   }, { offset: Number.NEGATIVE_INFINITY }).element;
 }
+
+window.addEventListener("scroll", function() {
+  var header = document.querySelector(".header-container");
+  var scrollPosition = window.scrollY;
+
+  if (scrollPosition > 0) {
+    header.classList.add("scrolled");
+  } else {
+    header.classList.remove("scrolled");
+  }
+});
