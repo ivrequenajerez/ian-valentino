@@ -1,46 +1,46 @@
 /* General */
 
 body {
-    margin: 0px;
-    font-family: 'Montserrat', sans-serif;
-    background-color: white;
-    /*display: flex;
+  margin: 0px;
+  font-family: 'Montserrat', sans-serif;
+  background-color: white;
+  /*display: flex;
     align-items: center;
     justify-content: center;*/
-    height: 100vh;
+  height: 100vh;
 }
 
 a {
-    color:black;
-    text-decoration: none;
+  color: black;
+  text-decoration: none;
 }
 
 h1 {
-    margin: 0px;
-    margin-bottom: 20px;
+  margin: 0px;
+  margin-bottom: 20px;
 }
 
 p {
-    margin-top: 2px;
+  margin-top: 2px;
 }
 
 li {
-    list-style: none;
-    display: inline;
-    padding: 0px;
-    margin:0px;
+  list-style: none;
+  display: inline;
+  padding: 0px;
+  margin: 0px;
 }
 
 ul {
-    display: inline-flex;
-    align-items: center;
-    padding: 0px;
-    margin: 0px;
+  display: inline-flex;
+  align-items: center;
+  padding: 0px;
+  margin: 0px;
 }
 
 button {
-    background: transparent;
-    border: transparent;
+  background: transparent;
+  border: transparent;
 }
 
 /* FIN General */
@@ -49,193 +49,194 @@ button {
 
 .header-elements img,
 .header-elements .header-menu-button {
-    transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
 }
 
 .header-elements.scrolled img,
 .header-elements.scrolled .header-menu-button {
-    width: 150px;
+  width: 150px;
 }
 
 .navbar-fixed-top.scrolled {
-    background-color: transparent !important;
-    transition: background-color 200ms linear;
+  background-color: transparent !important;
+  transition: background-color 200ms linear;
 }
 
 .navbar-fixed-top.scrolled:hover {
-    background-color: white !important;
-    transition: background-color 200ms linear;
+  background-color: white !important;
+  transition: background-color 200ms linear;
 }
 
 header.scrolled .header-container {
-    position: fixed;
-    top: 0;
-    transform: translate(-50%, 0);
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-    height: 80px;
-    display: flex;
-    align-items: center;
+  position: fixed;
+  top: 0;
+  transform: translate(-50%, 0);
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  height: 80px;
+  display: flex;
+  align-items: center;
 }
 
 .header-container {
-    padding-top: 1%;
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    background-color: white;
-    z-index: 999;
+  padding-top: 1%;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  background-color: white;
+  z-index: 999;
 }
 
 .header-elements {
-    padding: 0px;
-    padding-left: 10%;
-    margin: 0px;
-    display: flex;
-    align-items: center;
+  padding: 0px;
+  padding-left: 10%;
+  margin: 0px;
+  display: flex;
+  align-items: center;
 }
 
 .logo-ian {
-    max-width: 12em;
-    max-height: 12em;
+  max-width: 12em;
+  max-height: 12em;
 }
 
 .dropdown {
-    position: relative;
-    display: inline-block;
+  position: relative;
+  display: inline-block;
 }
 
 .dropdown-content {
-    display: none;
-    position: absolute;
-    background-color: #f9f9f9;
-    font-size: 15px;
-    min-width: 100%;
-    overflow: auto;
-    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
-    z-index: 999;
-    margin-top: 100px;
-    margin-left: 10px;
+  display: none;
+  position: absolute;
+  background-color: #f9f9f9;
+  font-size: 15px;
+  min-width: 100%;
+  overflow: auto;
+  box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+  z-index: 999;
+  margin-top: 100px;
+  margin-left: 10px;
 }
 
 .dropdown-content a {
-    color: black;
-    text-decoration: none;
-    display: block;
+  color: black;
+  text-decoration: none;
+  display: block;
 }
 
 .dropdown-button-1 {
-    padding: 1em 1em 0.5em 1em; /* top, right, bottom, left */
+  padding: 1em 1em 0.5em 1em;
+  /* top, right, bottom, left */
 }
 
 .dropdown-button-2 {
-    padding: 0em 0em 1em 1em;
+  padding: 0em 0em 1em 1em;
 }
 
 .dropdown:hover .dropdown-content {
-    display: block;
+  display: block;
 }
 
 .dropdown-content a:hover {
-    color: red;
+  color: red;
 }
 
 .dropdown-margin {
-    margin-left: 0.5em;
+  margin-left: 0.5em;
 }
 
 .header-menu-button {
-    cursor: pointer;
+  cursor: pointer;
 }
 
 .sticky {
-    position: fixed;
-    top: 0;
-    width: 100%
+  position: fixed;
+  top: 0;
+  width: 100%
 }
 
-.sticky + .content-container {
-    padding-top: 102px;
+.sticky+.content-container {
+  padding-top: 102px;
 }
 
 #attribution {
-    position: fixed;
-    right: 10px;
-    bottom: 10px;
-    color: #FE8989;
-    z-index: 100;
-    font-weight: bold;
-    cursor: pointer;
-  }
-  
+  position: fixed;
+  right: 10px;
+  bottom: 10px;
+  color: #FE8989;
+  z-index: 100;
+  font-weight: bold;
+  cursor: pointer;
+}
+
 #attribution a {
-    color: inherit;
-    text-decoration: inherit;
+  color: inherit;
+  text-decoration: inherit;
 }
 
 #container {
-    position: relative;
-    width: 100%;
-    height: 100%;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
+  position: relative;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
 
 /* Botón animado */
 
 .button {
-    position: relative;
-    margin: 0px;
-    padding: 0px;
-    display: inline-flex;
-    justify-content: center;
-    align-items: center;
-    box-shadow: 0px 0px 0 0px rgba(0,0,0,0);
-    border-radius: 50px;
-    width: 6.25rem;
-    font-family: 'Montserrat', sans-serif;
-    font-size: 1.75rem;
-    color: black;
-    cursor: pointer;
-    transition: all 0.3s ease;
+  position: relative;
+  margin: 0px;
+  padding: 0px;
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  box-shadow: 0px 0px 0 0px rgba(0, 0, 0, 0);
+  border-radius: 50px;
+  width: 6.25rem;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 1.75rem;
+  color: black;
+  cursor: pointer;
+  transition: all 0.3s ease;
 }
 
 .button .icons {
-    position: relative;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    margin: 0 4.31rem 0 0;
-    height: 2.6rem;
-    font-size: 26px;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0 4.31rem 0 0;
+  height: 2.6rem;
+  font-size: 26px;
 }
 
 .button .icons i {
-    position: absolute;
-    top: 0;
-    left: 0;
-    display: block;
+  position: absolute;
+  top: 0;
+  left: 0;
+  display: block;
 }
 
 .button .icons .icon-default {
-    transition: opacity .3s, transform .3s;
+  transition: opacity .3s, transform .3s;
 }
 
 .button .icons .icon-hover {
-    transition: opacity .3s, transform .3s;
-    transform: rotate(-180deg) scale(.5);
-    opacity: 0;
+  transition: opacity .3s, transform .3s;
+  transform: rotate(-180deg) scale(.5);
+  opacity: 0;
 }
 
 .button:hover .icons .icon-hover {
-    transform: rotate(0deg) scale(1);
-    opacity: 1;
+  transform: rotate(0deg) scale(1);
+  opacity: 1;
 }
 
 .button:hover .icons .icon-default {
-    transform: rotate(180deg) scale(.5);
-    opacity: 0;
+  transform: rotate(180deg) scale(.5);
+  opacity: 0;
 }
 
 /* FIN Botón animado */
@@ -245,38 +246,317 @@ header.scrolled .header-container {
 /*MAIN*/
 
 .main-container {
-    margin-top: 100px;
+  margin-top: 100px;
 }
 
 .map-container {
-    text-align: center;
+  text-align: center;
 }
 
 .imgCentral {
-    width: 200px;
+  width: 210px;
+  
+}
+
+.imgCentral:hover {
+  animation: pop 0.3s linear 1;
+}
+
+.espacio {
+  width: 436px;
 }
 
 .cards-container {
-    display: flex;
-    justify-content: center;
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  padding-top: 20px;
 }
 
 .card {
-    padding-left: 4%;
-    padding-right: 4%;
+  padding: 0 20px;
+  /* Alineación del texto */
+  font-size: 12px;
 }
 
 .card-color {
-    background-color: white;
-    border: solid 0.5px black;
+  background-color: white;
+  border: solid 0.5px black;
 }
 
 .card-position {
-    display: inline-flex;
-    align-items: center;
+  display: inline-flex;
+  align-items: center;
 }
 
-/**/
+.padding-card-sides {
+  padding-left: 100px;
+  padding-right: 100px;
+}
+
+.ag-courses_item {
+  -ms-flex-preferred-size: calc(33.33333% - 30px);
+  flex-basis: calc(33.33333% - 30px);
+  /* margin: 0 15px 30px; */
+  /* overflow: hidden; */
+  /* border-radius: 28px;*/
+}
+
+.ag-courses-item_link {
+  display: block;
+  padding: 30px 20px;
+  background-color: #121212;
+
+  overflow: hidden;
+
+  position: relative;
+}
+
+.ag-courses-item_link:hover,
+.ag-courses-item_link:hover .ag-courses-item_date {
+  text-decoration: none;
+  color: #FFF;
+}
+
+.ag-courses-item_link:hover .ag-courses-item_bg {
+  transform: scale(10);
+}
+
+.ag-courses-item_title {
+  min-height: 87px;
+  margin: 0 0 25px;
+
+  overflow: hidden;
+
+  font-weight: bold;
+  font-size: 30px;
+  color: #FFF;
+
+  z-index: 2;
+  position: relative;
+}
+
+.ag-courses-item_date-box {
+  font-size: 18px;
+  color: #FFF;
+
+  z-index: 2;
+  position: relative;
+}
+
+.ag-courses-item_date {
+  font-weight: bold;
+  color: #f9b234;
+
+  -webkit-transition: color .5s ease;
+  -o-transition: color .5s ease;
+  transition: color .5s ease
+}
+
+.ag-courses-item_bg {
+  height: 128px;
+  width: 128px;
+  background-color: #f9b234;
+
+  z-index: 1;
+  position: absolute;
+  top: -75px;
+  right: -75px;
+
+  border-radius: 50%;
+
+  -webkit-transition: all .5s ease;
+  -o-transition: all .5s ease;
+  transition: all .5s ease;
+}
+
+.ag-courses_item:nth-child(2n) .ag-courses-item_bg {
+  background-color: #3ecd5e;
+}
+
+.ag-courses_item:nth-child(3n) .ag-courses-item_bg {
+  background-color: #e44002;
+}
+
+.ag-courses_item:nth-child(4n) .ag-courses-item_bg {
+  background-color: #952aff;
+}
+
+.ag-courses_item:nth-child(5n) .ag-courses-item_bg {
+  background-color: #cd3e94;
+}
+
+.ag-courses_item:nth-child(6n) .ag-courses-item_bg {
+  background-color: #4c49ea;
+}
+
+@media only screen and (max-width: 979px) {
+  .ag-courses_item {
+    -ms-flex-preferred-size: calc(50% - 30px);
+    flex-basis: calc(50% - 30px);
+  }
+
+  .ag-courses-item_title {
+    font-size: 24px;
+  }
+}
+
+@media only screen and (max-width: 767px) {
+  .ag-format-container {
+    width: 96%;
+  }
+
+}
+
+@media only screen and (max-width: 639px) {
+  .ag-courses_item {
+    -ms-flex-preferred-size: 100%;
+    flex-basis: 100%;
+  }
+
+  .ag-courses-item_title {
+    min-height: 72px;
+    line-height: 1;
+
+    font-size: 24px;
+  }
+
+  .ag-courses-item_link {
+    padding: 22px 40px;
+  }
+
+  .ag-courses-item_date-box {
+    font-size: 16px;
+  }
+}
+
+
+/*----------------------*/
+
+.flip-card {
+  background-color: transparent;
+  width: 355px;
+  height: 200px;
+  perspective: 1000px;
+  /* Remove this if you don't want the 3D effect */
+  padding-bottom: 20px;
+}
+
+.central-card {
+  background-color: transparent;
+  width: 434px;
+  height: 200px;
+  border: 1px solid #f1f1f1;
+}
+
+p {
+  margin-right: 30px;
+  margin-left: 30px;
+}
+
+/* This container is needed to position the front and back side */
+.flip-card-inner {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  transition: transform 0.8s;
+  transform-style: preserve-3d;
+}
+
+/* Do an horizontal flip when you move the mouse over the flip box container */
+.flip-card:hover .flip-card-inner {
+  transform: rotateY(180deg);
+}
+
+/* Position the front and back side */
+.flip-card-front,
+.flip-card-back {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  -webkit-backface-visibility: hidden;
+  /* Safari */
+  backface-visibility: hidden;
+}
+
+/* Style the front side (fallback if image is missing) */
+.flip-card-front {
+  background-color: black;
+  color: white;
+  display: flex;
+  align-content: center;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.central-card-front {
+  background-color: transparent;
+  display: flex;
+  align-content: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  -webkit-backface-visibility: hidden;
+  /* Safari */
+  backface-visibility: hidden;
+}
+
+.arrow1-container {
+  position: absolute;
+  top: 52%;
+  left: 61%;
+  transform: translate(-50%, -50%);
+}
+
+.arrow2-container {
+  position: absolute;
+  top: 52%;
+  left: 38%;
+  transform: translate(-50%, -50%);
+}
+
+.arrow3-container {
+  position: absolute;
+  top: 72%;
+  left: 61%;
+  transform: translate(-50%, -50%);
+}
+
+.arrow4-container {
+  position: absolute;
+  top: 72%;
+  left: 38%;
+  transform: translate(-50%, -50%);
+}
+
+.arrow {
+  transition: transform 0.3s ease;
+  cursor: none;
+}
+
+.arrow:hover {
+  animation: pop 0.3s linear 1;
+}
+
+@keyframes pop {
+  50% {
+    transform: scale(1.2);
+  }
+}
+
+/* Style the back side */
+.flip-card-back {
+  background-color: black;
+  color: white;
+  display: flex;
+  align-items: center;
+  transform: rotateY(180deg);
+}
+
+/*----------------------*/
 
 /*FIN MAIN*/
 
