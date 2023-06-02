@@ -81,7 +81,7 @@ header.scrolled .header-container {
 }
 
 .navbar-fixed-top:hover {
-  background-color: #f1f1f1 !important;
+  background-color: white !important;
   transition: background-color 200ms linear;
 }
 
