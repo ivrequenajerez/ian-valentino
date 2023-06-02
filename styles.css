@@ -544,10 +544,7 @@ header.scrolled .header-container {
 
 .phone {
   transition: transform 0.3s ease;
-}
-
-.phone:hover {
-  animation: pop 0.3s linear 1;
+  animation: pop 1s linear 2;
 }
 
 .arrow {
@@ -794,6 +791,10 @@ header.scrolled .header-container {
 
 .cards-container-height {
   height: 460px;
+}
+
+.cards-padding-top {
+  padding-top: 50px;
 }
 
 .card1 {
