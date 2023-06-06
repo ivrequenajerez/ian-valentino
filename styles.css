@@ -269,7 +269,11 @@ header.scrolled .header-container {
 }
 
 .cards-container-padding {
-  padding-top: 100px;
+  padding-top: 170px;
+}
+
+.cards-container-padding-main {
+  padding-top: 80px;
 }
 
 .card {
@@ -542,11 +546,6 @@ header.scrolled .header-container {
   margin-top: 1rem;
 }
 
-.phone:hover {
-  transition: transform 0.3s ease;
-  animation: pop 0.4s linear 1;
-}
-
 .arrow {
   transition: transform 0.3s ease;
 }
@@ -798,7 +797,7 @@ header.scrolled .header-container {
   background-repeat: no-repeat;
   background-size: contain;
   background-position: center;
-  height: 400px;
+  height: 466px;
   background-color: transparent;
   border: none;
   box-shadow: none;
@@ -840,14 +839,14 @@ header.scrolled .header-container {
 }
 
 .card4 {
-  background-image: url(img1/img2.jpg);
+  background-image: url(img1/web.jpg);
   background-repeat: no-repeat;
-  background-size: 450px;
-  background-position: center;
+  background-size: 456px;
+  background-position: bottom;
 }
 
 .card5 {
-  background-image: url(img1/img3.jpg);
+  background-image: url(img1/apps.jpg);
   background-repeat: no-repeat;
   background-size: 450px;
   background-position: center;
@@ -986,14 +985,20 @@ header.scrolled .header-container {
   }
 }
 
-
 .title {
-  font-size: 1.3rem;
+  font-size: 1.6rem;
   font-weight: bold;
   line-height: 1.2;
   margin-top: 33px;
   margin-bottom: 0px;
   color: white;
+}
+
+.main-card-title {
+  font-size: 2rem;
+  font-weight: 600;
+  margin-top: 27px;
+  text-shadow: 0 0 8px #00000080;
 }
 
 .copy {
