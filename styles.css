@@ -758,7 +758,6 @@ header.scrolled .header-container {
   background-image: none;
 }
 
-
 .cards-padding-top {
   padding-top: 50px;
 }
@@ -772,6 +771,35 @@ header.scrolled .header-container {
   background-color: transparent;
   border: none;
   box-shadow: none;
+  transition: transform 0.5s ease;
+}
+
+.card1:hover {
+  animation: rotate 1s forwards; /* Al hacer hover, el elemento rota 20 grados */
+}
+
+.card1:not(:hover) {
+  animation: rotate-back 1s forwards; /* Al dejar de hacer hover, se activa la animación para volver a 0 grados */
+}
+
+@keyframes rotate {
+  from {
+    transform: rotate(0deg);
+  }
+
+  to {
+    transform: rotate(20deg);
+  }
+}
+
+@keyframes rotate-back {
+  from {
+    transform: rotate(20deg);
+  }
+
+  to {
+    transform: rotate(0deg);
+  }
 }
 
 .card2 {
@@ -1074,6 +1102,7 @@ header.scrolled .header-container {
   align-items: center;
   gap: 20px;
 }
+
 .footer-container-prueba {
   display: flex;
   flex-wrap: wrap;
