@@ -1,16 +1,13 @@
-/* General */
+/*----Estilos generales----*/
+
 body {
-  margin: 0px;
+  margin: 0;
   font-family: 'Montserrat', sans-serif;
-  background-color: white;
-  /*display: flex;
-    align-items: center;
-    justify-content: center;*/
+}
+
+.body-container {
   height: 100vh;
-  background-image: url(img1/fondo1.jpg);
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-position: center;
+  background: url(img1/fondo1.jpg) no-repeat center / cover;
 }
 
 strong {
@@ -23,7 +20,7 @@ a {
 }
 
 h1 {
-  margin: 0px;
+  margin: 0;
   margin-bottom: 20px;
 }
 
@@ -35,23 +32,18 @@ p {
 li {
   list-style: none;
   display: inline;
-  padding: 0px;
-  margin: 0px;
+  padding: 0;
+  margin: 0;
 }
 
 ul {
   display: inline-flex;
   align-items: center;
-  padding: 0px;
-  margin: 0px;
+  padding: 0;
+  margin: 0;
 }
 
-button {
-  background: transparent;
-  border: transparent;
-}
-
-/* FIN General */
+/*----Fin Estilos generales----*/
 
 /*----Header----*/
 
@@ -70,13 +62,22 @@ header.scrolled .header-container {
   transform: translate(-50%, 0);
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
   height: 80px;
-  display: flex;
   align-items: center;
   background-color: white;
 }
 
 .header-container.scrolled {
   background-color: white;
+}
+
+.fixed {
+  position: fixed;
+  top: 0;
+  width: 100%;
+}
+
+.content-container.fixed+.content-container {
+  padding-top: 102px;
 }
 
 .navbar-fixed-top {
@@ -86,23 +87,16 @@ header.scrolled .header-container {
 
 .navbar-fixed-top:hover {
   background-color: white !important;
-  transition: background-color 200ms linear;
 }
 
 .header-elements {
-  padding: 0;
   padding-left: 10%;
-  margin: 0;
   display: flex;
   align-items: center;
 }
 
-.header-menu-button {
-  transition: all 0.3s ease-in-out;
-}
-
 .header-elements.scrolled img,
-.header-elements.scrolled .header-menu-button {
+.header-elements.scrolled {
   width: 150px;
 }
 
@@ -111,74 +105,27 @@ header.scrolled .header-container {
   max-height: 12em;
 }
 
+.dropdown-container {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
 .dropdown {
   position: relative;
   display: inline-block;
-
   z-index: 999;
-}
-
-.dropdown-content {
-  display: none;
-  position: absolute;
-  background-color: #f9f9f9;
-  font-size: 15px;
-  min-width: 100%;
-  overflow: auto;
-  box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
-  z-index: 999;
-  margin-top: 100px;
-  margin-left: 10px;
-}
-
-.dropdown-content a {
-  color: black;
-  text-decoration: none;
-  display: block;
-}
-
-.dropdown-button-1 {
-  padding: 1em 1em 0.5em 1em;
-}
-
-.dropdown-button-2 {
-  padding: 0em 0em 1em 1em;
 }
 
 .dropdown:hover .dropdown-content {
   display: block;
 }
 
-.dropdown-content a:hover {
-  color: red;
-}
-
 .dropdown-margin {
   margin-left: 0.5em;
-}
-
-.header-menu-button {
-  cursor: pointer;
-}
-
-.sticky {
-  position: fixed;
-  top: 0;
-  width: 100%;
-}
-
-.sticky+.content-container {
-  padding-top: 102px;
-}
-
-#dropdown-container {
-  position: relative;
-  width: 100%;
-  height: 100%;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
 }
 
 .button {
@@ -188,10 +135,9 @@ header.scrolled .header-container {
   display: inline-flex;
   justify-content: center;
   align-items: center;
-  box-shadow: 0 0 0 0 rgba(0, 0, 0, 0);
+  box-shadow: none;
   border-radius: 50px;
   width: 6.25rem;
-  font-family: 'Montserrat', sans-serif;
   font-size: 1.75rem;
   color: black;
   cursor: pointer;
@@ -212,7 +158,6 @@ header.scrolled .header-container {
   position: absolute;
   top: 0;
   left: 0;
-  display: block;
 }
 
 .button .icons .icon-default {
@@ -235,6 +180,33 @@ header.scrolled .header-container {
   opacity: 0;
 }
 
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #f9f9f9;
+  font-size: 15px;
+  min-width: 100%;
+  overflow: auto;
+  box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+  z-index: 999;
+  margin-top: 180px;
+  margin-left: 50px;
+  padding-bottom: 15px;
+}
+
+.dropdown-content a {
+  color: black;
+  text-decoration: none;
+  display: block;
+}
+
+.dropdown-content a:hover {
+  color: red;
+}
+
+.dropdown-button {
+  padding: 1em 2em 0.5em 1.5em;
+}
 
 /*----Fin Header----*/
 
@@ -506,7 +478,7 @@ header.scrolled .header-container {
   flex-wrap: wrap;
   position: absolute;
   width: 100%;
-  height: 80%;  
+  height: 80%;
   -webkit-backface-visibility: hidden;
   backface-visibility: hidden;
 }
