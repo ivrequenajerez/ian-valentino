@@ -763,7 +763,7 @@ header.scrolled .header-container {
 }
 
 .card1 {
-  background-image: url(img1/phone1.png);
+  background-image: url(img1/phone1.webp);
   background-repeat: no-repeat;
   background-size: contain;
   background-position: center;
@@ -772,34 +772,6 @@ header.scrolled .header-container {
   border: none;
   box-shadow: none;
   transition: transform 0.5s ease;
-}
-
-.card1:hover {
-  animation: rotate 1s forwards; /* Al hacer hover, el elemento rota 20 grados */
-}
-
-.card1:not(:hover) {
-  animation: rotate-back 1s forwards; /* Al dejar de hacer hover, se activa la animación para volver a 0 grados */
-}
-
-@keyframes rotate {
-  from {
-    transform: rotate(0deg);
-  }
-
-  to {
-    transform: rotate(20deg);
-  }
-}
-
-@keyframes rotate-back {
-  from {
-    transform: rotate(20deg);
-  }
-
-  to {
-    transform: rotate(0deg);
-  }
 }
 
 .card2 {
@@ -838,14 +810,14 @@ header.scrolled .header-container {
 }
 
 .card4 {
-  background-image: url(img1/web.jpg);
+  background-image: url(img1/web.webp);
   background-repeat: no-repeat;
   background-size: 456px;
   background-position: bottom;
 }
 
 .card5 {
-  background-image: url(img1/apps.jpg);
+  background-image: url(img1/apps.webp);
   background-repeat: no-repeat;
   background-size: 450px;
   background-position: center;
@@ -900,84 +872,6 @@ header.scrolled .header-container {
   width: 40px;
   -webkit-animation: heartbeat 1.5s ease-in-out infinite both;
   animation: heartbeat 1.5s ease-in-out infinite both;
-}
-
-@-webkit-keyframes heartbeat {
-  from {
-    -webkit-transform: scale(1);
-    transform: scale(1);
-    -webkit-transform-origin: center center;
-    transform-origin: center center;
-    -webkit-animation-timing-function: ease-out;
-    animation-timing-function: ease-out;
-  }
-
-  10% {
-    -webkit-transform: scale(0.91);
-    transform: scale(0.91);
-    -webkit-animation-timing-function: ease-in;
-    animation-timing-function: ease-in;
-  }
-
-  17% {
-    -webkit-transform: scale(0.98);
-    transform: scale(0.98);
-    -webkit-animation-timing-function: ease-out;
-    animation-timing-function: ease-out;
-  }
-
-  33% {
-    -webkit-transform: scale(0.87);
-    transform: scale(0.87);
-    -webkit-animation-timing-function: ease-in;
-    animation-timing-function: ease-in;
-  }
-
-  45% {
-    -webkit-transform: scale(1);
-    transform: scale(1);
-    -webkit-animation-timing-function: ease-out;
-    animation-timing-function: ease-out;
-  }
-}
-
-@keyframes heartbeat {
-  from {
-    -webkit-transform: scale(1);
-    transform: scale(1);
-    -webkit-transform-origin: center center;
-    transform-origin: center center;
-    -webkit-animation-timing-function: ease-out;
-    animation-timing-function: ease-out;
-  }
-
-  10% {
-    -webkit-transform: scale(0.91);
-    transform: scale(0.91);
-    -webkit-animation-timing-function: ease-in;
-    animation-timing-function: ease-in;
-  }
-
-  17% {
-    -webkit-transform: scale(0.98);
-    transform: scale(0.98);
-    -webkit-animation-timing-function: ease-out;
-    animation-timing-function: ease-out;
-  }
-
-  33% {
-    -webkit-transform: scale(0.87);
-    transform: scale(0.87);
-    -webkit-animation-timing-function: ease-in;
-    animation-timing-function: ease-in;
-  }
-
-  45% {
-    -webkit-transform: scale(1);
-    transform: scale(1);
-    -webkit-animation-timing-function: ease-out;
-    animation-timing-function: ease-out;
-  }
 }
 
 .title {
@@ -1080,19 +974,6 @@ header.scrolled .header-container {
     transition-duration: 0s;
   }
 }
-
-.reveal {
-  position: relative;
-  transform: translateY(150px);
-  opacity: 0;
-  transition: all 2s ease;
-}
-
-.reveal.active {
-  transform: translateY(0);
-  opacity: 1;
-}
-
 /*Footer*/
 
 .footer-container {
@@ -1111,7 +992,7 @@ header.scrolled .header-container {
 }
 
 .footer-padding-top {
-  padding-top: 201px;
+  padding-top: 50px;
 }
 
 
