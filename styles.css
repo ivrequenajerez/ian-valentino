@@ -40,6 +40,16 @@ ul {
 
 /*----Header----*/
 
+header {
+  position: fixed;
+  top: 0;
+  transition: top 0.2s ease-in-out;
+}
+
+.nav-up {
+  top: -40px;
+}
+
 .header-container {
   padding-top: 1%;
   display: flex;
@@ -407,6 +417,7 @@ ul {
   line-height: 1.35;
   margin-top: 8px;
   margin-bottom: 7px;
+  color: white;
 }
 
 @media (hover: hover) and (min-width: 600px) {
@@ -480,14 +491,33 @@ ul {
   padding-bottom: 35px;
 }
 
+.page-box-2 {
+  display: inline-flex;
+  padding-top: 20px;
+  padding-bottom: 35px;
+}
+
 .left-col {
   padding-left: 95px;
-  padding-right: 35px;
+  padding-right: 10px;
 }
 
 .right-col {
   padding-left: 35px;
   padding-right: 135px;
+}
+
+.web-text {
+  margin: 0px;
+}
+
+.web-img {
+  height: 235px;
+}
+
+h2 {
+  margin: 0px;
+  margin-bottom: 10px;
 }
 
 /*  */
@@ -548,3 +578,4 @@ ul {
 }
 
 /*FIN Footer*/
+
